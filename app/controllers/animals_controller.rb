@@ -26,7 +26,7 @@ class AnimalsController < ApplicationController
 
   def update
     @animal = Animal.find(params[:id])
-    @animal.update(params[:animal])
+    @animal.update(animal_params)
   end
 
   private
