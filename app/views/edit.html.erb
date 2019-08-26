@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <h1>Edit an animal</h1>
+      <%= render 'form', animal: @animal %>
+      <%= simple_form_for @animal do |f| %>
+        <%= f.input :name %>
+        <%= f.input :species %>
+        <%= f.input :price %>
+        <%= f.input :description %>
+        <%= f.input :photo %>
+        <%= f.input :photo_cache, as: :hidden %>
+        <%= f.button :submit, class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+</div>
