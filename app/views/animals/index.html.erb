@@ -1,5 +1,8 @@
-<h1>all animals</h1>
-<% @animals.each do |animal| %>
-  <%= cl_image_tag animal.photo.url(:thumbnail), height: 300, width: 300, crop: :thumb %>
-  <%= animal.name %>
-<% end %>
+
+<div class="animals">
+  <h1>all animals</h1>
+  <% @animals.each do |animal| %>
+    <%= cl_image_tag animal.photo.url(:thumbnail), height: 300, width: 300, crop: :thumb %>
+    <%= animal.name %>
+  <% end %>
+</div>
