@@ -5,6 +5,7 @@ class AnimalsController < ApplicationController
 
   def show
     @animal = Animal.find(params[:id])
+    @therapy = Therapy.new
   end
 
   def new
