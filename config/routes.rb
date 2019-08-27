@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get 'kitchen_sink', to: 'pages#kitchen_sink'
 
-  resources :animals
-  resources :therapies
+  resources :animals do
+    resources :therapies, only: [ :new, :create, :index ]
+  end
 end

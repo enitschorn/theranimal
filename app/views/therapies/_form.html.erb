@@ -1,7 +1,4 @@
-<%= simple_form_for therapy do |f| %>
-  <%= f.input :user %>
-  <%= f.input :animal %>
-  <%= f.input :price %>
+<%= simple_form_for [@animal, @therapy] do |f| %>
   <%= f.input :start_on %>
   <%= f.input :end_on %>
   <%= f.button :submit, class: 'btn btn-primary' %>
