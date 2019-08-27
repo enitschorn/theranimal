@@ -10,9 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 2019_08_27_012509) do
-
+ActiveRecord::Schema.define(version: 2019_08_27_050628) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +25,15 @@ ActiveRecord::Schema.define(version: 2019_08_27_012509) do
     t.string "photo"
     t.bigint "user_id"
     t.index ["user_id"], name: "index_animals_on_user_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.text "description"
+    t.integer "rating"
+    t.bigint "animal_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["animal_id"], name: "index_reviews_on_animal_id"
   end
 
   create_table "therapies", force: :cascade do |t|
@@ -54,7 +61,7 @@ ActiveRecord::Schema.define(version: 2019_08_27_012509) do
   end
 
   add_foreign_key "animals", "users"
-
+  add_foreign_key "reviews", "animals"
   add_foreign_key "therapies", "animals"
   add_foreign_key "therapies", "users"
 end
