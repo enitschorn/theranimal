@@ -29,5 +29,4 @@ class TherapiesController < ApplicationController
   def therapy_params
     params.require(:therapy).permit(:start_on, :end_on)
   end
-
 end
