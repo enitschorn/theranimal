@@ -1,11 +1,15 @@
-<div class="container justify-content-center my-5" style="width: 500px">
-  <div><h1><%= @animal.name %></h1></div>
-  <div>
+<div class="container">
+  <h1><%= @animal.name %></h1>
+
     <%= cl_image_tag @animal.photo, height: 300, width: 300, crop: :fill %>
     <%= @animal.species %>
     <%= @animal.price %>
     <%= @animal.description %>
-  </div>
-  <div><%= link_to 'Edit', edit_animal_path(@animal), class: "btn btn-primary" %></div>
-  <div><%= link_to 'Delete', @animal, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %></div>
+
+  <%= link_to 'Edit', edit_animal_path(@animal)%>
+  <%= link_to 'Delete', @animal, method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>
+
+<div class="container">
+  <%= render 'form', animal: @animal %>
 </div>
