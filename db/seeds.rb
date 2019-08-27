@@ -18,9 +18,15 @@ User.create!(
 puts 'Creating animals...'
 
 animal_names = []
+animal_species = ['dog', 'cat', 'lion', 'spider', 'unicorn']
 3.times { animal_names << Faker::Creature::Animal.name }
 animal_names.uniq.each do |name|
-  @animal = Animal.new(name: name)
+  @animal = Animal.new(
+    name: name,
+    species: animal_species.sample,
+    price: rand(50...200),
+    description: Faker::Lorem.paragraph
+    )
   @animal.remote_photo_url = images.sample
   @animal.save!
 end
