@@ -1,17 +1,16 @@
-<<<<<<< HEAD
 <div class="header">
   <h3>Available Animals</h3>
 
+<% link_to animal_path(animal) do  %>
   <div class="animal">
     <% @animals.each do |animal| %>
-    <%= link_to animal_path(animal) do  %>
       <div class="card" style="width: 18rem;">
         <%= cl_image_tag animal.photo.url(:thumbnail), height: 300, width: 300, crop: :thumb, class: "card-img-top" %>
         <div class="card-body">
           <%= animal.name %>
         </div>
-        <%= end %>
       </div>
     <% end %>
   </div>
+<% end %>
 </div>
