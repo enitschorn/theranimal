@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get 'kitchen_sink', to: 'pages#kitchen_sink'
 
   resources :animals
+  resources :therapies
 end
