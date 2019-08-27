@@ -1,8 +1,14 @@
+<div class="header">
+  <h3>Available Animals</h3>
 
-<div class="animals">
-  <h1>all animals</h1>
-  <% @animals.each do |animal| %>
-    <%= cl_image_tag animal.photo.url(:thumbnail), height: 300, width: 300, crop: :thumb %>
-    <%= animal.name %>
-  <% end %>
+  <div class="animal">
+    <% @animals.each do |animal| %>
+      <div class="card" style="width: 18rem;">
+        <%= cl_image_tag animal.photo.url(:thumbnail), height: 300, width: 300, crop: :thumb, class: "card-img-top" %>
+        <div class="card-body">
+          <%= animal.name %>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
