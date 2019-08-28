@@ -25,7 +25,7 @@ class TherapiesController < ApplicationController
     else
       flash[:alert] = 'This time has been booked.'
     end
-    redirect_to animal_path(@animal)
+    redirect_to dashboard_path(@therapy.user)
   end
 
   private
