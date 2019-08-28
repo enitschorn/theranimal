@@ -7,6 +7,8 @@ class TherapiesController < ApplicationController
 
   def show
     @therapy = Therapy.find(params[:id])
+    # @user = User.find(current_user[:id])
+    # @animals = @user.animals
   end
 
   def new
@@ -25,6 +27,22 @@ class TherapiesController < ApplicationController
     else
       flash[:alert] = 'This time has been booked.'
     end
+    redirect_to dashboard_path(@therapy.user)
+  end
+
+  def edit
+    @therapy = Therapy.find(params[:id])
+    @animal = @therapy.animal
+  end
+
+  def update
+    @therapy = Therapy.find(params[:id])
+    @therapy.update(therapy_params)
+  end
+
+  def destroy
+    @therapy = Therapy.find(params[:id])
+    @therapy.destroy
     redirect_to dashboard_path(@therapy.user)
   end
 

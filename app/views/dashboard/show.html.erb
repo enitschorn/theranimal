@@ -13,6 +13,9 @@
           <p class="card-text">Therapy date: <%= therapy.start_on %> - <%= therapy.start_on %></p>
           <p class="card-text">$ <%= therapy.price*date %></p>
         </div>
+        <div class="card-footer">
+          <small class="text-muted"><%= link_to 'Check', animal_therapy_path(therapy.animal, therapy) %></small>
+        </div>
       </div>
     <% end %>
   </div>
@@ -35,5 +38,3 @@
   </div>
 </div>
 </div>
-
-
