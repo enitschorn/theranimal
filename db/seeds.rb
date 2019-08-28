@@ -22,7 +22,7 @@ animal_species = ['dog', 'cat', 'lion', 'spider', 'unicorn']
 3.times { animal_names << Faker::Creature::Animal.name }
 animal_names.uniq.each do |name|
   @animal = Animal.new(
-    name: name,
+    name: name.capitalize,
     species: animal_species.sample,
     price: rand(50...200),
     description: Faker::Lorem.paragraph

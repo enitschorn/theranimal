@@ -18,3 +18,21 @@
 @import "components/alert";
 @import "components/avatar";
 @import "components/navbar";
+
+html, body {
+    height: 100%;
+}
+body {
+    margin:0px;
+    padding: 0px;
+}
+.wrap {
+  height: auto;
+  margin-bottom: 50px;
+  min-height: 100%;
+  padding: 0 0 80px; /* footer height + space */
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+

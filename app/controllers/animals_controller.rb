@@ -18,11 +18,13 @@ class AnimalsController < ApplicationController
 
   def create
     @animal = Animal.new(animal_params)
+    @animal.user = current_user
     if @animal.save
-      redirect_to @animal
+      flash[:alert] = 'You have successfully created an animal.'
     else
-      render :new
+      flash[:alert] = 'You cannot create this animal.'
     end
+    redirect_to dashboard_path(@animal.user)
   end
 
   def edit
