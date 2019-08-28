@@ -9,4 +9,8 @@ Rails.application.routes.draw do
   end
 
   resources :dashboard, only: [:show]
+
+  namespace :user do
+    root :to => "dashboard#show"
+  end
 end
