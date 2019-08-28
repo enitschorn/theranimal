@@ -4,6 +4,7 @@
   <%= therapy.animal.name %>
   <% date = therapy.end_on.mjd - therapy.start_on.mjd + 1  %>
   <%= therapy.price*date %>
+  <%= link_to 'Check', animal_therapy_path(therapy.animal, therapy) %>
 <% end %>
 <h1>all animals</h1>
 <% @animals.each do |animal| %>
