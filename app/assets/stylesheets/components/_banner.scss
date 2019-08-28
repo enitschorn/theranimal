@@ -1,14 +1,14 @@
 .banner {
   display: flex;
-  justify-content: flex-end;
+  align-items: left;
   background-size: cover;
   height: 100vh;
-  width: 100vw;
   background-position: center;
   padding: 150px 0;
 }
 
 .banner h1 {
+  font-family: 'Open Sans', sans-serif;
   margin: 0;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
@@ -24,15 +24,16 @@
 }
 
 .banner-text {
-  padding-right: 50px;
-  justify-content: right;
   display: inline-block;
+  margin-left: 100px;
+  margin-top: 200px;
 }
+
 
 .btn-flat {
   color: white;
   padding: 8px 24px;
   border-radius: 4px;
-  background: #1EDD88;
+  background: #ACBED8;
   transition: background 0.3s ease;
 }
