@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'kitchen_sink', to: 'pages#kitchen_sink'
 
   resources :animals do
-    resources :therapies, only: [ :new, :create, :index ]
+    resources :therapies, only: [ :new, :create, :index, :show, :edit, :destroy, :update ]
     resources :reviews, only: [:new, :create]
   end
 
