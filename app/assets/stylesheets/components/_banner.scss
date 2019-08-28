@@ -23,10 +23,13 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
-.banner-text {
-  display: inline-block;
-  margin-left: 100px;
-  margin-top: 200px;
+.banner-text-box {
+  position: absolute;
+  width: 1140px;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  color: white;
 }
 
 

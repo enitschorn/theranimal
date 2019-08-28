@@ -13,14 +13,14 @@
     </div>
 
     <ul class="navbar-nav mr-auto">
-      <li><%= link_to "Home", root_path, class: "nav-link" %></li>
       <li><%= link_to "Animals", animals_path, class: "nav-link" %></li>
       <% if user_signed_in? %>
+        <li><%= link_to "Home", root_path, class: "nav-link" %></li>
         <li class="nav-item dropdown">
           <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://res.cloudinary.com/charmdev/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566801585/cat.jpg" />
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <%= link_to "Add an animal", new_animal_path, class: "dropdown-item" %>
             <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-            <a class="dropdown-item" href="#">Account</a>
           </div>
         </li>
         <% else %>
