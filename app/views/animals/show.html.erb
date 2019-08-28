@@ -1,4 +1,4 @@
-<h1><%= @animal.name %></h1>
+<h1>Hi! I'm, <%= @animal.name %></h2>
 
 <div class="container">
   <div class="animal_info">
@@ -6,9 +6,9 @@
       <%= cl_image_tag @animal.photo, className: "animal_image", height: 300, width: 300, crop: :fill %>
     </div>
     <div class="animal_details">
+      <p> <%= @animal.description %> </p>
+      <p> Price per Day: $<%= @animal.price %> </p>
       <p> Species: <%= @animal.species %> </p>
-      <p> Price per Day: <%= @animal.price %> </p>
-      <p> Description: <%= @animal.description %> </p>
       <%= link_to 'Edit', edit_animal_path(@animal)%>
       <%= link_to 'Delete', @animal, method: :delete, data: { confirm: 'Are you sure?' } %>
     </div>
