@@ -22,7 +22,7 @@ puts 'Creating animals...'
   name: 'Simba',
   species: 'lion',
   price: 250,
-  description: 'Simba is our beautiul lion, perfect dor you if you want to gain a new perspective on life.',
+  description: 'Simba is our beautiul lion, perfect for you if you want to gain a new perspective on life.',
   user_id: User.last.id
   )
 
