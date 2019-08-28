@@ -1,15 +1,22 @@
-<div class="container">
-  <h1><%= @animal.name %></h1>
-
-    <%= cl_image_tag @animal.photo, height: 300, width: 300, crop: :fill %>
-    <%= @animal.species %>
-    <%= @animal.price %>
-    <%= @animal.description %>
-
-  <%= link_to 'Edit', edit_animal_path(@animal)%>
-  <%= link_to 'Delete', @animal, method: :delete, data: { confirm: 'Are you sure?' } %>
-</div>
+<h1>Hi! I'm, <%= @animal.name %></h2>
 
 <div class="container">
-  <%= render 'therapies/form', animal: @animal, therapy: @therapy %>
+  <div class="animal_info">
+    <div>
+      <%= cl_image_tag @animal.photo, className: "animal_image", height: 300, width: 300, crop: :fill %>
+    </div>
+    <div class="animal_details">
+      <p> <%= @animal.description %> </p>
+      <p> Price per Day: $<%= @animal.price %> </p>
+      <p> Species: <%= @animal.species %> </p>
+      <%= link_to 'Edit', edit_animal_path(@animal)%>
+      <%= link_to 'Delete', @animal, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+  </div>
+  <div class="therapies">
+    <h3>Book me for therapy!</h3>
+    <%= render 'therapies/form', animal: @animal, therapy: @therapy %>
+  </div>
 </div>
+
+
