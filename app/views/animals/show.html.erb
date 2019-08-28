@@ -9,8 +9,6 @@
       <p> <%= @animal.description %> </p>
       <p> Price per Day: $<%= @animal.price %> </p>
       <p> Species: <%= @animal.species %> </p>
-      <%= link_to 'Edit', edit_animal_path(@animal)%>
-      <%= link_to 'Delete', @animal, method: :delete, data: { confirm: 'Are you sure?' } %>
     </div>
   </div>
   <div class="therapies">
