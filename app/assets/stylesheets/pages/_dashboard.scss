@@ -1,18 +1,16 @@
 .dashboard-container {
-  width: 70vw;
+  display: flex;
+  flex-direction: row;
   margin: 0 auto;
-}
-
-.dashboard-heading h1 {
-  text-align: left;
+  width: 90vw;
 }
 
 .dashboard-info {
-  display: flex;
-  justify-content: space-around;
-  margin: 0 auto;
+  width: 90vw;
 }
 
-.dashboard-animal-info {
+.divider {
+  border-bottom: 2px solid rgba(230,230,230,0.5);
+  width: 90vw;
   margin: 0 auto;
 }

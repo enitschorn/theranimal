@@ -1,9 +1,9 @@
 <%= simple_form_for @animal do |f| %>
-  <%= f.input :name %>
-  <%= f.input :species %>
-  <%= f.input :price %>
-  <%= f.input :description %>
-  <%= f.input :photo %>
+  <%= f.input :name, label: 'What\'s the name of your furry friend?' %>
+  <%= f.input :species, collection: ['dog', 'cat', 'lion', 'spider', 'unicorn', 'fish', 'hamster', 'mouse', 'bear', 'tiger', 'kangaroo'], label: 'What family does your furry friend belong to?' %>
+  <%= f.input :price, label: 'How much $$$ do you charge per day for a therapy with your furry friend?' %>
+  <%= f.input :description, label: 'Describe your furry friend, so they get to to help lots of people.' %>
+  <%= f.input :photo, label: 'Choose a picture.' %>
   <%= f.input :photo_cache, as: :hidden %>
   <%= f.button :submit, class: 'btn-flat' %>
 <% end %>

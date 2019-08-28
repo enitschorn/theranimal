@@ -1,21 +1,24 @@
-<h1>Hi! I'm, <%= @animal.name %></h2>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @animal.photo %>');">
+</div>
 
-<div class="container">
+
+<div class="animal-container my-5">
   <div class="animal_info">
-    <div>
-      <%= cl_image_tag @animal.photo, className: "animal_image", height: 300, width: 300, crop: :fill %>
-    </div>
     <div class="animal_details">
+      <div class="animal-heading"><h2>Meet <%= @animal.name %></h2></div>
+      <div class="animal-species"><i class="fas fa-paw"></i> <em><%= @animal.species %> </em></div>
+
       <p> <%= @animal.description %> </p>
-      <p> Price per Day: $<%= @animal.price %> </p>
-      <p> Species: <%= @animal.species %> </p>
       <%= link_to 'Edit', edit_animal_path(@animal)%>
       <%= link_to 'Delete', @animal, method: :delete, data: { confirm: 'Are you sure?' } %>
     </div>
   </div>
   <div class="therapies">
-    <h3>Book me for therapy!</h3>
+    <div class="therapy-price"><h5><strong>$<%= @animal.price %></strong><small> per day</small></h5></div>
+    <div class="therapy-dates">
     <%= render 'therapies/form', animal: @animal, therapy: @therapy %>
+    </div>
+    <div class="therapy-charging-info"><p><small>You won't be charged yet.</small></p></div>
   </div>
 </div>
 

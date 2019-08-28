@@ -1,8 +1,7 @@
 <%= form_tag animals_path, method: :get do %>
   <%= text_field_tag :query,
     params[:query],
-    class: "form-control form-inline my-2 my-lg-0 mr-sm-2",
+    style: "font-size: 16px; width: 400px; padding: 8px",
     placeholder: "Find an animal"
   %>
-  <%= submit_tag "Search", class: "btn btn-outline-success my-2 my-sm-0" %>
 <% end %>
