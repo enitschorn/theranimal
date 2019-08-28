@@ -1,13 +1,40 @@
-<h1>My Dashboard</h1>
-<h1>all therapies</h1>
-<% @therapies.each do |therapy| %>
-  <%= therapy.animal.name %>
-  <% date = therapy.end_on.mjd - therapy.start_on.mjd + 1  %>
-  <%= therapy.price*date %>
-  <%= link_to 'Check', animal_therapy_path(therapy.animal, therapy) %>
-<% end %>
-<h1>all animals</h1>
-<% @animals.each do |animal| %>
-  <%= animal.name %>
-<% end %>
-  <%= link_to 'New Animal', new_animal_path(@animal)%>
+<div class="dashboard-container my-5">
+  <div class="dashboard-heading"><h1>My Dashboard</h1></div>
+
+<div class="dashboard-info">
+  <div class="dashboard-animal-info">
+    <h3>Recently booked therapies</h3>
+    <% @therapies.each do |therapy| %>
+      <div class="card my-3" style="box-shadow: 5px 10px 20px rgba(200,200,200,0.5); margin-right: 80px">
+        <%= cl_image_tag therapy.animal.photo, height: 250, crop: :fill %>
+        <div class="card-body">
+          <h5 class="card-title"><%= therapy.animal.name %></h5>
+          <% date = therapy.end_on.mjd - therapy.start_on.mjd + 1  %>
+          <p class="card-text">Therapy date: <%= therapy.start_on %> - <%= therapy.start_on %></p>
+          <p class="card-text">$ <%= therapy.price*date %></p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted"><%= link_to 'Check', animal_therapy_path(therapy.animal, therapy) %></small>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <div>
+    <h3>Your animals</h3>
+    <% @animals.each do |animal| %>
+      <div class="card my-3" style="box-shadow: 5px 10px 20px rgba(200,200,200,0.5); margin-right: 80px">
+        <%= cl_image_tag animal.photo, height: 250, crop: :fill %>
+        <div class="card-body">
+          <h5 class="card-title"><%= animal.name %></h5>
+          <p class="card-text"><%= animal.description %></p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted"><%= link_to 'More info', animal_path(animal)%></small>
+        </div>
+      </div>
+      <% end %>
+      <%= link_to 'New Animal', new_animal_path(@animal), class: "btn-flat" %>
+  </div>
+</div>
+</div>
