@@ -1,8 +1,8 @@
-<%= form_tag animalss_path, method: :get do %>
+<%= form_tag animals_path, method: :get do %>
   <%= text_field_tag :query,
     params[:query],
-    class: "form-control",
+    class: "form-control form-inline my-2 my-lg-0 mr-sm-2",
     placeholder: "Find an animal"
   %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
+  <%= submit_tag "Search", class: "btn btn-outline-success my-2 my-sm-0" %>
 <% end %>
