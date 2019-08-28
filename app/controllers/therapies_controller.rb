@@ -20,7 +20,11 @@ class TherapiesController < ApplicationController
     @therapy.animal = @animal
     @therapy.price = @animal.price
     @therapy.user = current_user
-    @therapy.save
+    if @therapy.save
+      flash[:alert] = 'You have successfully booked.'
+    else
+      flash[:alert] = 'This time has been booked.'
+    end
     redirect_to animal_path(@animal)
   end
 
