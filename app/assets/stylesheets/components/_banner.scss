@@ -1,6 +1,6 @@
 .banner {
   display: flex;
-  justify-content: flex-end;
+  align-items: left;
   background-size: cover;
   height: 100vh;
   background-position: center;
@@ -24,11 +24,11 @@
 }
 
 .banner-text {
-  width: 500px;
-  justify-content: left;
   display: inline-block;
-  margin-left: 200px;
+  margin-left: 100px;
+  margin-top: 200px;
 }
+
 
 .btn-flat {
   color: white;
