@@ -22,7 +22,6 @@ gem 'webpacker'
 gem 'validates_overlap'
 gem 'geocoder'
 
-
 group :development do
   gem 'web-console', '>= 3.3.0'
 end

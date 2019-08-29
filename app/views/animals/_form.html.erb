@@ -3,6 +3,7 @@
   <%= f.input :species, collection: ['dog', 'cat', 'lion', 'spider', 'unicorn', 'fish', 'hamster', 'mouse', 'bear', 'tiger', 'kangaroo'], label: 'What species is your furry friend?' %>
   <%= f.input :price, label: 'How much do you charge per day (in $$$)?' %>
   <%= f.input :description, label: 'Describe your furry friend.' %>
+  <%= f.input :address, label: 'Where are you located?' %>
   <%= f.input :photo, label: 'Choose a picture.' %>
   <%= f.input :photo_cache, as: :hidden %>
   <%= f.button :submit, 'Add animal', class: 'btn-flat' %>
