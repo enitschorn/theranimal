@@ -1,16 +1,20 @@
-<div class="container d-flex justify-content-between my-5">
-  <div class="card-deck">
+<div class="card-container">
+  <div class="cards">
     <% @animals.each do |animal| %>
-      <div class="card" style="box-shadow: 5px 10px 20px rgba(200,200,200,0.5)">
-        <%= cl_image_tag animal.photo, height: 250, crop: :fill %>
-        <div class="card-body">
-          <h5 class="card-title"><%= animal.name %></h5>
-          <p class="card-text"><%= animal.description %></p>
-        </div>
-        <div class="card-footer">
-          <small class="text-muted"><%= link_to 'More info', animal_path(animal)%></small>
+      <div class="card-trip">
+        <%= link_to animal_path(animal) do  %>
+          <%= cl_image_tag animal.photo, crop: :fill %>
+        <% end %>
+        <div class="card-trip-infos">
+          <div>
+            <h2><%= animal.name %></h2>
+            <p><%= animal.description %></p>
+          </div>
+          <h2 class="card-trip-pricing">$<%= animal.price %></h2>
         </div>
       </div>
     <% end %>
   </div>
 </div>
+
+

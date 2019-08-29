@@ -1,0 +1,25 @@
+.form-container {
+  display: flex;
+  flex-direction: row;
+  padding: 16px 0;
+  margin: 32px auto;
+}
+
+.form_info {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  padding: 32px;
+  margin-right: 10px;
+}
+
+.form-heading h3 {
+  text-align: left;
+  font-style: bold;
+  margin-bottom: 24px;
+}
+
+.form-image {
+
+}
+

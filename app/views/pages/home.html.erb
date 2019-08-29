@@ -1,2 +1,64 @@
 <%= render :partial => "shared/banner" %>
 
+<div class="container my-5">
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="width: 50vw; margin: 0 auto">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <h5>Really great experience with TherAnimal. Haven't been depressed for hours now. Great feeling!</h5>
+        <p><em>Maya H.</em></p>
+      </div>
+      <div class="carousel-item">
+        <h5>Loved Charlie so much! Wish I could've kept him forever with me! He really helped me back on track.</h5>
+        <p><em>Lucas T.</em></p>
+      </div>
+      <div class="carousel-item">
+        <h5>Had the most magical weekend with Frah! Still seeing stars and sparkles!</h5>
+          <p><em>Farida A.</em></p>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<div class="card-container my-5">
+  <div class="cards">
+    <div class="card-product">
+      <img src="https://images.unsplash.com/photo-1548439739-0cf616cef1cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" />
+      <div class="card-product-infos">
+        <h2>Dogs</h2>
+      </div>
+    </div>
+    <div class="card-product">
+      <img src="https://images.unsplash.com/photo-1516729557409-298ab938f00c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" />
+      <div class="card-product-infos">
+        <h2>Lions</h2>
+      </div>
+    </div>
+    <div class="card-product">
+      <img src="https://images.unsplash.com/photo-1544717455-4cf7ad978978?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" />
+      <div class="card-product-infos">
+        <h2>Spiders</h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container my-5">
+  <div class="CTA-container" style="width: 50vw; margin: 0 auto; text-align: center;">
+    <h4>Don't give up on life, book a tharpy with us.</h4>
+    <%= link_to 'Discover Our Animals', animals_path, class: "btn-flat" %>
+  </div>
+</div>
+
+
+
+
+
+

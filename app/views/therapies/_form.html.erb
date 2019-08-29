@@ -1,5 +1,5 @@
 <%= simple_form_for [@animal, @therapy] do |f| %>
-  <%= f.input :start_on %>
-  <%= f.input :end_on %>
-  <%= f.button :submit, class: 'btn-flat' %>
+  <%= f.input :start_on, label: 'From' %>
+  <%= f.input :end_on, label: 'To' %>
+  <%= f.button :submit, 'Reserve', class: 'btn-flat', style: 'width: 100%; margin-top: 8px'%>
 <% end %>
