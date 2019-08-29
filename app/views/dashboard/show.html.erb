@@ -14,9 +14,20 @@
           </div>
           <% end %>
           <div class="card-therapy-infos">
-            <h4><%= therapy.animal.name %></h4>
-            <p><strong><%= therapy.start_on %> - <%= therapy.end_on %></strong></p>
-            <p><%= link_to 'Add new review', new_animal_review_path(therapy.animal) %></p>
+            <h4><%= therapy.animal.name %></h4><br>
+            <h6><%= therapy.start_on %> - <%= therapy.end_on %></h6>
+            <h5>$ <%= therapy.animal.price %></h5>
+          <div class=card-therapy-links>
+            <%= link_to dashboard_path(@user.id), class: "therapy-delete-link", method: :delete do %>
+            <i class="fas fa-trash" style="color: rgba(0,0,0,0.8)"; font-size: 16px></i>
+            <% end %>
+            <%= link_to edit_animal_therapy_path(therapy.animal), class: "therapy-edit-link" do %>
+            <i class="fas fa-pen" style="color: rgba(0,0,0,0.8)"; font-size: 16px></i></i>
+            <% end %>
+            <%= link_to new_animal_review_path(therapy.animal), class: "new-review-link" do %>
+            <i class="fas fa-star" style="color: rgba(0,0,0,0.8)"; font-size: 16px></i>
+            <% end %>
+          </div>
           </div>
         </div>
     <% end %>
@@ -33,21 +44,15 @@
     </div>
     <div class="cards">
       <% @animals.each do |animal| %>
-        <div class="animal-show-link">
-        <%= link_to animal_path(animal) do %>
-          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path animal.photo %>')">
-            <%= animal.name %>
-          <div class="animal-edit-link">
-            <%= link_to edit_animal_path(animal) do %>
-            <i class="fas fa-pen" style="color: rgba(255,255,255,0.4); font-size: 16px"></i>
-            <% end %>
-          </div>
-          <div class="animal-delete-link">
-            <%= link_to animal_path(animal), method: :delete do %>
-              <i class="fas fa-trash" style="color: rgba(255,255,255,0.4); font-size: 16px"></i>
-            <% end %>
-          </div>
-          </div>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path animal.photo %>')">
+          <%= animal.name %>
+
+        <%= link_to animal_path(animal), class: "animal-show-link" do %><% end %>
+          <%= link_to edit_animal_path(animal), class: "animal-edit-link" do %>
+          <i class="fas fa-pen" style="color: rgba(255,255,255,0.4); font-size: 16px"></i>
+          <% end %>
+          <%= link_to animal_path(animal), class: "animal-delete-link", method: :delete do %>
+            <i class="fas fa-trash" style="color: rgba(255,255,255,0.4); font-size: 16px"></i>
           <% end %>
         </div>
       <% end %>

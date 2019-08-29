@@ -5,14 +5,16 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
+  flex-direction: row;
   align-items: center;
   border-radius: 4px;
   margin-bottom: 16px;
+  position: relative;
 }
 
 .card-therapy-image {
   height: 100%;
-  width: 230px;
+  width: 30%;
 }
 
 .card-therapy h4 {
@@ -22,6 +24,8 @@
 }
 
 .card-therapy .card-therapy-infos {
+  width: 70%;
+  height: 90%;
   padding: 16px;
 }
 
@@ -29,4 +33,23 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+.therapy-edit-link {
+  position: absolute;
+  top: 3px;
+  right: 32px;
+  text-decoration: none;
+}
+
+.therapy-delete-link {
+  position: absolute;
+  top: 3px;
+  right: 6px;
+}
+
+.new-review-link {
+  position: absolute;
+  top: 3px;
+  right: 60px;
 }
