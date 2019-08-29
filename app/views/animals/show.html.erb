@@ -7,6 +7,7 @@
       <div class="animal-heading"><h2>Meet <%= @animal.name %></h2></div>
       <div class="animal-species"><i class="fas fa-paw"></i> <em><%= @animal.species %> </em></div>
       <div class="rating">
+        <%= rating_display(@animal) %>
       </div>
       <p> <%= @animal.description %> </p>
       <% if @animal.user == current_user %>
