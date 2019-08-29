@@ -20,6 +20,7 @@ gem 'uglifier'
 gem 'webpacker'
 
 gem 'validates_overlap'
+gem 'geocoder'
 
 
 group :development do
