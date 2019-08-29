@@ -14,3 +14,28 @@
   width: 90vw;
   margin: 0 auto;
 }
+
+.animal-show-link {
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.animal-show-link:hover {
+  background: rgba(255,255,255,0.2);
+  text-decoration: none;
+}
+
+.animal-edit-link {
+  position: absolute;
+  top: 0;
+  right: 28px;
+  text-decoration: none;
+}
+
+.animal-delete-link {
+  position: absolute;
+  top: 0;
+  right: 6px;
+}
