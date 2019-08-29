@@ -42,6 +42,10 @@ class AnimalsController < ApplicationController
     redirect_to animals_path
   end
 
+  def rating
+
+  end
+
   private
 
   def animal_params
