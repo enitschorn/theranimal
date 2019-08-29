@@ -7,13 +7,6 @@
       <div class="animal-heading"><h2>Meet <%= @animal.name %></h2></div>
         <%= rating_display(@animal) %>
       <div class="animal-species"><i class="fas fa-paw"></i> <em><%= @animal.species %> </em></div>
-      <div class="rating">
-        <% if @animal.reviews.present? %>
-          <% @animal.reviews.each do |review| %>
-            <%= review.description %>
-          <% end %>
-        <% end %>
-      </div>
 
       <p> <%= @animal.description %> </p>
       <% if @animal.user == current_user %>
@@ -35,7 +28,7 @@
     </div>
   </div>
   <% if @animal.user != current_user %>
-  <div class="therapies">
+  <div class="therapies" style="margin-left: 16px">
     <div class="therapy-price"><h5><strong>$<%= @animal.price %></strong><small> per day</small></h5></div>
     <div class="therapy-dates">
       <%= render 'therapies/form', animal: @animal, therapy: @therapy %>
@@ -43,6 +36,20 @@
     <div class="therapy-charging-info"><p><small>You won't be charged yet.</small></p></div>
   </div>
   <% end %>
+</div>
+<div class="animal-container">
+  <div class="animal-info">
+    <div clas="reviews-heading" style="border-bottom: 1px solid rgba(230,230,230,0.5); margin-bottom: 16px;">
+      <h5><%= @animal.reviews.count %> Review(s)  <%= rating_display(@animal) %></h5>
+    </div>
+    <div class="rating" style="border-bottom: 1px solid rgba(230,230,230,0.5); padding-bottom: 16px;">
+        <% if @animal.reviews.present? %>
+          <% @animal.reviews.each do |review| %>
+            <%= review.description %>
+          <% end %>
+        <% end %>
+      </div>
+  </div>
 </div>
 
 

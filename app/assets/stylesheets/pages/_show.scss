@@ -2,7 +2,6 @@
   display: flex;
   width: 60vw;
   margin: 0 auto;
-
 }
 
 .animal-heading h2 {
@@ -18,7 +17,6 @@
   margin: 0 auto;
   background: #F4F4F4;
   padding: 32px;
-  margin-right: 10px;
 }
 
 .animal_details {
@@ -32,6 +30,7 @@
 .therapies {
   border: 1px solid rgba(190,190,190,0.5);
   padding: 24px;
+  width: 40%;
 }
 
 .therapy-price {
