@@ -3,4 +3,8 @@ class Animal < ApplicationRecord
 
   has_many :therapies
   belongs_to :user
+
+  def blank_stars
+    5 - rating.to_i
+  end
 end

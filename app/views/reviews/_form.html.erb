@@ -1,0 +1,9 @@
+<h1> Add a new review for <%=  @animal.name %> </h1>
+
+<div>
+  <%= simple_form_for [@animal, @review] do |f| %>
+  <%= f.input :description %>
+  <%= f.input :rating, collection: (0..5) %>
+  <%= f.submit "Add Review", class: "btn-flat" %>
+  <% end %>
+</div>

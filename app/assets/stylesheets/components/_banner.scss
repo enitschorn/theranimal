@@ -26,14 +26,18 @@
 }
 
 .banner-text-box {
-  position: absolute;
-  width: 1140px;
-  top: 50%;
-  left: 55%;
+  position: relative;
+  width: 80%;
+  margin-left: 0;
+  top: 40%;
+  left: 40%;
   transform: translate(-50%, -50%);
   color: white;
 }
 
+.banner-button {
+  margin-top: 40px;
+}
 
 .btn-flat {
   color: white;
@@ -44,6 +48,21 @@
 }
 
 .btn-flat:hover {
+  color: white;
+  background: #0B7A75;
+  text-decoration: none;
+}
+
+.btn-flat-outline {
+  color: #19535F;
+  border: 1px solid #19535F;
+  border-radius: 4px;
+  background: white;
+  transition: background 0.3s ease;
+  padding: 8px 24px;
+}
+
+.btn-flat-outline:hover {
   color: white;
   background: #0B7A75;
   text-decoration: none;
