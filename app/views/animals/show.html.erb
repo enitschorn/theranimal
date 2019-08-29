@@ -9,7 +9,17 @@
       <div class="animal-species"><i class="fas fa-paw"></i> <em><%= @animal.species %> </em></div>
       <p> <%= @animal.description %> </p>
       <% if @animal.user == current_user %>
-        <%= link_to 'Edit', edit_animal_path(@animal)%>
+        <button type="button" class="btn-flat" data-toggle="modal" data-target="#edit_modal" >
+          Edit
+        </button>
+
+      <div class="modal fade" id="edit_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <%= render 'edit', animal: @animal %>
+            </div>
+          </div>
+        </div>
       <% end %>
       <% if @animal.user == current_user %>
         <%= link_to 'Delete', @animal, method: :delete, data: { confirm: 'Are you sure?' } %>
