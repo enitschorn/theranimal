@@ -7,8 +7,14 @@ class Animal < ApplicationRecord
 
   def average_rating
     reviews = self.reviews
-    reviews.each do |rating|
-      ratings = @rating[animal.id]
+    total = 0
+    reviews.each do |review|
+      total += review.rating
+    end
+    unless total == 0
+      total / reviews.count
+    else
+      0
     end
   end
 end
