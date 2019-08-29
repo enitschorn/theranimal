@@ -5,23 +5,22 @@
       <p>These are all the therapies you have booked.</p>
     </div>
     <div class="cards">
+      <div class="card-therapy-container">
       <% @therapies.each do |therapy| %>
-        <div class="card-trip">
+        <div class="card-therapy">
           <%= link_to edit_animal_therapy_path(@current_user.id) do  %>
-          <%= cl_image_tag therapy.animal.photo, crop: :fill %>
-          <% end %>
-          <div class="card-trip-infos">
-            <div>
-              <h2><%= therapy.animal.name %></h2>
-              <p><%= therapy.animal.description %></p>
-            </div>
-            <h2 class="card-trip-pricing">$<%= therapy.animal.price %></h2>
+          <div class="card-therapy-image">
+            <%= cl_image_tag therapy.animal.photo, width: 230, height: 240, crop: :fill %>
           </div>
-        <div class="card-trip-infos">
-          <%= link_to 'Add new review', new_animal_review_path(therapy.animal) %>
+          <% end %>
+          <div class="card-therapy-infos">
+            <h4><%= therapy.animal.name %></h4>
+            <p><strong><%= therapy.start_on %> - <%= therapy.end_on %></strong></p>
+            <p><%= link_to 'Add new review', new_animal_review_path(therapy.animal) %></p>
+          </div>
         </div>
-        </div>
-      <% end %>
+    <% end %>
+    </div>
     </div>
   </div>
 </div>
@@ -34,11 +33,23 @@
     </div>
     <div class="cards">
       <% @animals.each do |animal| %>
-        <%= link_to animal_path(animal) do  %>
+        <div class="animal-show-link">
+        <%= link_to animal_path(animal) do %>
           <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path animal.photo %>')">
             <%= animal.name %>
+          <div class="animal-edit-link">
+            <%= link_to edit_animal_path(animal) do %>
+            <i class="fas fa-pen" style="color: rgba(255,255,255,0.4); font-size: 16px"></i>
+            <% end %>
           </div>
-        <% end %>
+          <div class="animal-delete-link">
+            <%= link_to animal_path(animal), method: :delete do %>
+              <i class="fas fa-trash" style="color: rgba(255,255,255,0.4); font-size: 16px"></i>
+            <% end %>
+          </div>
+          </div>
+          <% end %>
+        </div>
       <% end %>
     </div>
   </div>
