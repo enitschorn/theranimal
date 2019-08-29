@@ -52,3 +52,18 @@
   background: #0B7A75;
   text-decoration: none;
 }
+
+.btn-flat-outline {
+  color: #19535F;
+  border: 1px solid #19535F;
+  border-radius: 4px;
+  background: white;
+  transition: background 0.3s ease;
+  padding: 8px 24px;
+}
+
+.btn-flat-outline:hover {
+  color: white;
+  background: #0B7A75;
+  text-decoration: none;
+}
