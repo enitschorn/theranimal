@@ -7,7 +7,7 @@
     <div class="animal_details">
       <div class="animal-heading"><h2>Meet <%= @animal.name %></h2></div>
       <div class="animal-species"><i class="fas fa-paw"></i> <em><%= @animal.species %> </em></div>
-
+      
       <p> <%= @animal.description %> </p>
       <%= link_to 'Edit', edit_animal_path(@animal)%>
       <%= link_to 'Delete', @animal, method: :delete, data: { confirm: 'Are you sure?' } %>
