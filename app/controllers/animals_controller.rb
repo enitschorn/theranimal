@@ -24,7 +24,7 @@ class AnimalsController < ApplicationController
     else
       flash[:alert] = 'You cannot create this animal.'
     end
-    redirect_to dashboard_path(@animal.user)
+    redirect_to dashboard_path(@user.id)
   end
 
   def edit
