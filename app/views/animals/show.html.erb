@@ -43,12 +43,12 @@
       <h5><%= @animal.reviews.count %> Review(s)  <%= rating_display(@animal) %></h5>
     </div>
     <div class="rating" style="border-bottom: 1px solid rgba(230,230,230,0.5); padding-bottom: 16px;">
-        <% if @animal.reviews.present? %>
-          <% @animal.reviews.each do |review| %>
-            <%= review.description %>
-          <% end %>
+      <% if @animal.reviews.present? %>
+        <% @animal.reviews.each do |review| %>
+          <%= review.description %>
         <% end %>
-      </div>
+      <% end %>
+    </div>
   </div>
 </div>
 
