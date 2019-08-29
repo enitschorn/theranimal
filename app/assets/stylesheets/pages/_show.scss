@@ -11,21 +11,19 @@
   color: #19535F;
 }
 
-.animal_info {
+.animal-info {
   display: flex;
   justify-content: space-around;
   margin: 0 auto;
   background: #F4F4F4;
   padding: 32px;
+  width: 100%;
 }
 
-.animal_details {
-  margin: 0 auto;
+.animal-details {
+  width: 100%;
 }
 
-.animal-species {
-  margin-bottom: 16px;
-}
 
 .therapies {
   border: 1px solid rgba(190,190,190,0.5);
