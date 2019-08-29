@@ -1,10 +1,12 @@
 class AnimalsController < ApplicationController
   def index
-    if params[:query].present?
+    if params[:query]
       @animals = Animal.where("species ILIKE ?", "%#{params[:query]}%")
+      empty_search_message = "Sorry, #{params[:query].capitalize} is not available, please try another one"
     else
       @animals = Animal.all
     end
+    redirect_to animals_path, flash: { empty_search: empty_search_message } if @animals.empty?
   end
 
   def show
