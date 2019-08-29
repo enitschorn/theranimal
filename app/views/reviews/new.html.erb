@@ -1,9 +1,14 @@
-<h1> Add a new review for <%=  @animal.name %> </h1>
-
-<div>
-  <%= simple_form_for [@animal, @review] do |f| %>
-  <%= f.input :description %>
-  <%= f.input :rating, collection: (0..5) %>
-  <%= f.submit "Add Review", class: "btn-flat" %>
-  <% end %>
+<div class="review-form-container">
+  <div class="review-form_info">
+    <div class="review-form-heading"><h3>Add a new review for <%=  @animal.name %></h3>
+      <%= simple_form_for [@animal, @review] do |f| %>
+      <%= f.input :description %>
+      <%= f.input :rating, collection: (0..5) %>
+      <%= f.submit "Add Review", class: "btn-flat" %>
+      <% end %>
+    </div>
+  </div>
+  <div class="review-form-image">
+    <%= cl_image_tag @animal.photo, class: "border-radius: 4px" %>
+  </div>
 </div>
