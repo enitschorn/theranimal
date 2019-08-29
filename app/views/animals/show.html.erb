@@ -5,9 +5,9 @@
   <div class="animal_info">
     <div class="animal_details">
       <div class="animal-heading"><h2>Meet <%= @animal.name %></h2></div>
+        <%= rating_display(@animal) %>
       <div class="animal-species"><i class="fas fa-paw"></i> <em><%= @animal.species %> </em></div>
       <div class="rating">
-        <%= rating_display(@animal) %>
       </div>
       <p> <%= @animal.description %> </p>
       <% if @animal.user == current_user %>
@@ -17,7 +17,7 @@
 
       <div class="modal fade" id="edit_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
-          <div class="modal-content">
+          <div class="modal-content" style="width: 800px;">
             <%= render 'edit', animal: @animal %>
             </div>
           </div>
