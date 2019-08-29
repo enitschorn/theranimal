@@ -29,14 +29,17 @@ class AnimalsController < ApplicationController
 
   def edit
     @animal = Animal.find(params[:id])
+    authorize @animal
   end
 
   def update
+    authorize @animal
     @animal = Animal.find(params[:id])
     @animal.update(animal_params)
   end
 
   def destroy
+    authorize @animal
     @animal = Animal.find(params[:id])
     @animal.destroy
     redirect_to animals_path
