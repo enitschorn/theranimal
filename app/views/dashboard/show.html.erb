@@ -17,6 +17,9 @@
             </div>
             <h2 class="card-trip-pricing">$<%= therapy.animal.price %></h2>
           </div>
+        <div class="card-trip-infos">
+          <%= link_to 'Add new review', new_animal_review_path(therapy.animal) %>
+        </div>
         </div>
       <% end %>
     </div>

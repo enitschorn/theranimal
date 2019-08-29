@@ -1,13 +1,14 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @animal.photo %>');">
 </div>
 
-
 <div class="animal-container my-5">
   <div class="animal_info">
     <div class="animal_details">
       <div class="animal-heading"><h2>Meet <%= @animal.name %></h2></div>
       <div class="animal-species"><i class="fas fa-paw"></i> <em><%= @animal.species %> </em></div>
-      
+      <div class="rating">
+
+      </div>
       <p> <%= @animal.description %> </p>
       <%= link_to 'Edit', edit_animal_path(@animal)%>
       <%= link_to 'Delete', @animal, method: :delete, data: { confirm: 'Are you sure?' } %>
