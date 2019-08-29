@@ -6,4 +6,8 @@ class User < ApplicationRecord
 
   has_many :therapies
   has_many :animals
+
+  def owns?(animal)
+    animal.user == self
+  end
 end
