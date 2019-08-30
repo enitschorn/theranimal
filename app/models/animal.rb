@@ -1,15 +1,13 @@
 class Animal < ApplicationRecord
   mount_uploader :photo, PhotoUploader
-  
+
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
 
-  has_many :favorites, dependent: :destroy
+  has_many :favorites
   has_many :therapies
   has_many :reviews
   belongs_to :user
-
-  scope :favorited_by, ->(username) { joins(:favorites).where(favorites: { user: User.where(username: username) }) }
 
   def average_rating
     reviews = self.reviews
@@ -23,4 +21,11 @@ class Animal < ApplicationRecord
       0
     end
   end
+
+  def user_favorite?(current_user)
+    favorite = Favorite.where(user_id: current_user.id, animal_id: self.id)
+    favorite.present?
+  end
+
+
 end
