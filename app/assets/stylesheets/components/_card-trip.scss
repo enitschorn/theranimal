@@ -1,4 +1,5 @@
 .card-trip {
+  position: relative;
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -37,4 +38,16 @@
   right: 16px;
   top: -20px;
   width: 40px;
+}
+
+#heart-icon {
+  position: absolute;
+  top: 4px;
+  right: 12px;
+  color: #DB5461;
+  font-size: 24px;
+}
+
+#heart-icon:hover {
+  color: #B80C09;
 }

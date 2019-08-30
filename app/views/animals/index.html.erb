@@ -2,6 +2,9 @@
   <div class="cards-index">
     <% @animals.each do |animal| %>
       <div class="card-trip">
+        <%= link_to animal do  %>
+        <div id="heart-icon"><i class="fas fa-heart"></i></div>
+        <% end %>
         <%= link_to animal_path(animal) do  %>
           <%= cl_image_tag animal.photo, crop: :fill %>
         <% end %>
