@@ -4,10 +4,12 @@ Rails.application.routes.draw do
   get 'kitchen_sink', to: 'pages#kitchen_sink'
 
   resources :animals do
-    resources :therapies, only: [ :new, :create, :index, :show, :edit, :destroy, :update ]
+    resources :therapies
     resources :reviews, only: [:new, :create]
-    resource :favorite, only: [:create, :destroy]
+    resources :favorites, only: [:create]
   end
+
+  delete '/animals/:animal_id/favorites', to: 'favorites#destroy'
 
   resources :dashboard, only: [:show]
 
