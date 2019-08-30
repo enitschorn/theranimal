@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :animals do
     resources :therapies, only: [ :new, :create, :index, :show, :edit, :destroy, :update ]
     resources :reviews, only: [:new, :create]
+    resource :favorite, only: [:create, :destroy]
   end
 
   resources :dashboard, only: [:show]
