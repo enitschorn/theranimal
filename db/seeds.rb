@@ -53,7 +53,7 @@ puts 'Creating animals...'
   price: 100,
   description: 'Feeling down and depressed? Book my Charlie to cheer you up!',
   address: '19 Sandham St, Elsternwick VIC 3185',
-  user_id: User.last.id
+  user_id: User.first.id
   )
 
 @dog.save!
