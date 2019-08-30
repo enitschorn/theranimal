@@ -1,4 +1,4 @@
-<div class="card-container" style="display: flex">
+<div class="card-container">
   <div class="cards-index">
     <% @animals.each do |animal| %>
       <div class="card-trip">
@@ -20,10 +20,6 @@
   </div>
   <div
     id="map"
-    style="width: 40%;
-    height: 100vh;
-    position: sticky;
-    top: 0"
     data-markers="<%= @markers.to_json %>"
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
   ></div>

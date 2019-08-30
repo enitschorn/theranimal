@@ -1,11 +1,8 @@
 import "bootstrap";
+import 'mapbox-gl/dist/mapbox-gl.css';
 
-import { initMapbox } from './../plugins/init_mapbox'
-import { initAutocomplete } from './../plugins/init_autocomplete'
-
-initMapbox();
-initAutocomplete();
-
+import { initMapbox } from '../plugins/init_mapbox';
 import { displayAlertOnHeartClick } from './../plugins/favorites_list.js'
 
 displayAlertOnHeartClick();
+initMapbox();

@@ -1,3 +1,19 @@
+.card-container {
+  display: flex;
+}
+
+
+#map {
+  width: 40vw;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+.mapboxgl-canvas {
+  position: sticky !important;
+}
+
 .mapboxgl-popup {
   max-width: 200px;
 }

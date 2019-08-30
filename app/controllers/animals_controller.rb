@@ -7,8 +7,7 @@ class AnimalsController < ApplicationController
         redirect_to animals_path
       end
     else
-      @animals = Animal.all
-
+      @animals = Animal.geocoded
       @markers = @animals.map do |animal|
         {
           lat: animal.latitude,
