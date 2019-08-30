@@ -20,7 +20,6 @@
 @import "components/avatar";
 @import "components/navbar";
 
-
 ul {
   list-style: none;
   margin: 0 auto;
@@ -29,11 +28,8 @@ ul {
 
 .wrap {
   height: auto;
-  margin-bottom: 50px;
   min-height: 100%;
-  padding: 0 0 80px; /* footer height + space */
   box-sizing: border-box;
-  overflow: auto;
 }
 
 

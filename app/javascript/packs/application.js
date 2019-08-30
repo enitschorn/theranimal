@@ -1,8 +1,9 @@
 import "bootstrap";
 
+// CSS
 import 'mapbox-gl/dist/mapbox-gl.css';
-import { initMapbox } from './../plugins/init_mapbox'
-import { initAutocomplete } from './../plugins/init_autocomplete'
+// internal imports
+import { initMapbox } from '../plugins/init_mapbox';
+
 
 initMapbox();
-initAutocomplete();
