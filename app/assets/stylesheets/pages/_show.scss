@@ -1,3 +1,24 @@
+.show-banner {
+  display: flex;
+  align-items: left;
+  position: relative;
+  background-size: cover;
+  height: 100vh;
+  background-position: center;
+  padding: 150px 0;
+
+  h1 {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    color: white;
+    opacity: 0.8;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    font-size: 88px;
+    font-weight: bold;
+    text-align: left;
+  }
+}
+
 .animal-container {
   display: flex;
   width: 60vw;
