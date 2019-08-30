@@ -8,15 +8,9 @@ class AnimalsController < ApplicationController
       end
     else
       @animals = Animal.geocoded
-      @markers = @animals.map do |animal|
-        {
-          lat: animal.latitude,
-          lng: animal.longitude,
-          infoWindow: render_to_string(partial: "info_window", locals: { animal: animal }),
-          image_url: helpers.asset_url('theranimal_logo.png')
-        }
-      end
     end
+
+    @markers = animal_markers
     @animals = @animals.favorited_by(params[:favorited]) if params[:favorited].present?
   end
 
@@ -55,13 +49,20 @@ class AnimalsController < ApplicationController
     redirect_to animals_path
   end
 
-  def rating
-
-  end
-
   private
 
   def animal_params
     params.require(:animal).permit(:name, :species, :price, :description, :photo)
+  end
+
+  def animal_markers
+    @animals.map do |animal|
+      {
+        lat: animal.latitude,
+        lng: animal.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { animal: animal }),
+        image_url: helpers.asset_url('theranimal_logo.png')
+      }
+    end
   end
 end
