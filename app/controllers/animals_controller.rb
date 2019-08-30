@@ -17,6 +17,7 @@ class AnimalsController < ApplicationController
         }
       end
     end
+    @animals = @animals.favorited_by(params[:favorited]) if params[:favorited].present?
   end
 
   def show
