@@ -38,6 +38,7 @@ class TherapiesController < ApplicationController
   def update
     @therapy = Therapy.find(params[:id])
     @therapy.update(therapy_params)
+    redirect_to dashboard_path(@therapy.id)
   end
 
   def destroy

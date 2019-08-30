@@ -27,11 +27,11 @@ class AnimalsController < ApplicationController
     @animal = Animal.new(animal_params)
     @animal.user = current_user
     if @animal.save
-      flash[:alert] = 'You have successfully created an animal.'
+      flash[:alert] = 'You have successfully added your animal.'
     else
-      flash[:alert] = 'You cannot create this animal.'
+      flash[:alert] = 'You cannot add this animal.'
     end
-    redirect_to dashboard_path(@user.id)
+    redirect_to @animal
   end
 
   def edit
@@ -41,12 +41,13 @@ class AnimalsController < ApplicationController
   def update
     @animal = Animal.find(params[:id])
     @animal.update(animal_params)
+    redirect_to dashboard_path
   end
 
   def destroy
     @animal = Animal.find(params[:id])
     @animal.destroy
-    redirect_to animals_path
+    redirect_to dashboard_path
   end
 
   private
