@@ -26,6 +26,4 @@ class Animal < ApplicationRecord
     favorite = Favorite.where(user_id: current_user.id, animal_id: self.id)
     favorite.present?
   end
-
-
 end
