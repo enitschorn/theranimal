@@ -15,7 +15,7 @@
           <% end %>
           <div class="card-therapy-infos">
             <h4><%= therapy.animal.name %></h4><br>
-            <h6><%= therapy.start_on %> - <%= therapy.end_on %></h6>
+            <h6><%= therapy.start_on.strftime('%A, %b %d') %> - <%= therapy.end_on.strftime('%A, %b %d') %></h6>
             <h5>$ <%= therapy.animal.price %></h5>
           <div class=card-therapy-links>
             <%= link_to dashboard_path(@user.id), class: "therapy-delete-link", method: :delete do %>
