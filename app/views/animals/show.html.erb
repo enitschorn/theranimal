@@ -40,17 +40,17 @@
 </div>
 
 <div class="animal-container">
-  <div class="review-info">
-    <div clas="reviews-heading" style="border-bottom: 1px solid rgba(230,230,230,0.5); margin-bottom: 16px;">
+  <div class="review-info" style="margin-bottom: 24px;">
+    <div clas="reviews-heading" style="border-bottom: 2px solid rgba(230,230,230,0.5);">
       <h5><%= pluralize @animal.reviews.size, 'Review' %>  <%= rating_display(@animal) %></h5>
     </div>
-    <div class="rating" style="border-bottom: 1px solid rgba(230,230,230,0.5); padding-bottom: 16px;">
-      <% if @animal.reviews.present? %>
-        <% @animal.reviews.each do |review| %>
+    <% if @animal.reviews.present? %>
+      <% @animal.reviews.each do |review| %>
+        <div class="rating" style="border-bottom: 2px solid rgba(230,230,230,0.5); padding: 16px;">
           <%= review.description %>
+        </div>
         <% end %>
       <% end %>
-    </div>
   </div>
 </div>
 
