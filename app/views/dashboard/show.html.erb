@@ -18,10 +18,10 @@
             <h6><%= therapy.start_on.strftime('%A, %b %d') %> - <%= therapy.end_on.strftime('%A, %b %d') %></h6>
             <h5>$ <%= therapy.animal.price %></h5>
           <div class=card-therapy-links>
-            <%= link_to dashboard_path(@user.id), class: "therapy-delete-link", method: :delete do %>
+            <%= link_to animal_therapy_path(therapy.animal, therapy), class: "therapy-delete-link", method: :delete, data: { confirm: 'Are you sure?' }  do %>
             <i class="fas fa-trash" style="color: rgba(0,0,0,0.8)"; font-size: 16px></i>
             <% end %>
-            <%= link_to edit_animal_therapy_path(therapy.animal), class: "therapy-edit-link" do %>
+            <%= link_to edit_animal_therapy_path(therapy.animal, therapy), class: "therapy-edit-link" do %>
             <i class="fas fa-pen" style="color: rgba(0,0,0,0.8)"; font-size: 16px></i></i>
             <% end %>
             <%= link_to new_animal_review_path(therapy.animal), class: "new-review-link" do %>
@@ -47,11 +47,11 @@
         <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path animal.photo %>')">
           <%= animal.name %>
 
-        <%= link_to animal_path(animal), class: "animal-show-link" do %><% end %>
+          <%= link_to animal_path(animal), class: "animal-show-link" do %><% end %>
           <%= link_to edit_animal_path(animal), class: "animal-edit-link" do %>
           <i class="fas fa-pen" style="color: rgba(255,255,255,0.4); font-size: 16px"></i>
           <% end %>
-          <%= link_to animal_path(animal), class: "animal-delete-link", method: :delete do %>
+          <%= link_to animal_path(animal), class: "animal-delete-link", method: :delete, data: { confirm: 'Are you sure?' } do %>
             <i class="fas fa-trash" style="color: rgba(255,255,255,0.4); font-size: 16px"></i>
           <% end %>
         </div>
