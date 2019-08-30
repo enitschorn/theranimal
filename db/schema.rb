@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_29_113447) do
+ActiveRecord::Schema.define(version: 2019_08_30_012426) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,15 @@ ActiveRecord::Schema.define(version: 2019_08_29_113447) do
     t.float "latitude"
     t.float "longitude"
     t.index ["user_id"], name: "index_animals_on_user_id"
+  end
+
+  create_table "favorites", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "animal_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["animal_id"], name: "index_favorites_on_animal_id"
+    t.index ["user_id"], name: "index_favorites_on_user_id"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -64,6 +73,8 @@ ActiveRecord::Schema.define(version: 2019_08_29_113447) do
   end
 
   add_foreign_key "animals", "users"
+  add_foreign_key "favorites", "animals"
+  add_foreign_key "favorites", "users"
   add_foreign_key "reviews", "animals"
   add_foreign_key "therapies", "animals"
   add_foreign_key "therapies", "users"
