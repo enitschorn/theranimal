@@ -8,6 +8,15 @@ class AnimalsController < ApplicationController
       end
     else
       @animals = Animal.all
+
+      @markers = @animals.map do |animal|
+        {
+          lat: animal.latitude,
+          lng: animal.longitude,
+          infoWindow: render_to_string(partial: "info_window", locals: { animal: animal }),
+          image_url: helpers.asset_url('theranimal_logo.png')
+        }
+      end
     end
   end
 

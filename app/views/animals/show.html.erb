@@ -6,10 +6,11 @@
     <div class="animal-details">
       <div class="animal-heading"><h2>Meet <%= @animal.name %></h2></div>
         <%= rating_display(@animal) %>
-      <div class="animal-species"><i class="fas fa-paw"></i> <em><%= @animal.species %> </em></div>
+      <div class="animal-species"><i class="fas fa-paw"></i>   <em><%= @animal.species %></em></div>
+        <div class="animal-location" style="margin-bottom: 16px"><i class="fas fa-map-pin"></i>  <%= @animal.address %></div>
 
       <p> <%= @animal.description %> </p>
-      <% if @animal.user == current_user %>
+      <% if current_user.owns?(@animal) %>
         <button type="button" class="btn-flat" data-toggle="modal" data-target="#edit_modal" >
           Edit
         </button>

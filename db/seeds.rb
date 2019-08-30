@@ -23,6 +23,7 @@ puts 'Creating animals...'
   species: 'lion',
   price: 250,
   description: 'Simba is our beautiul lion, perfect for you if you want to gain a new perspective on life.',
+  address: '306 Glen Huntly Rd, Elsternwick VIC 3185',
   user_id: User.last.id
   )
 
@@ -34,6 +35,7 @@ puts 'Creating animals...'
   species: 'dog',
   price: 100,
   description: 'Feeling down and depressed? Book my Charlie to cheer you up!',
+  address: '19 Sandham St, Elsternwick VIC 3185',
   user_id: User.last.id
   )
 
@@ -45,6 +47,7 @@ puts 'Creating animals...'
   species: 'unicorn',
   price: 500,
   description: 'Need more magic in your life? Click down below and you\'ll be on the right way',
+  address: '481 Glen Huntly Rd, Elsternwick VIC 3185',
   user_id: User.last.id
   )
 
