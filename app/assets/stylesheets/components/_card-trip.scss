@@ -2,17 +2,22 @@
   position: relative;
   overflow: hidden;
   background: white;
+  border-radius: 8px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  border-radius: 4px;
 }
 
-.card-trip > img {
-  height: 250px;
+.card-trip:hover {
+  transform: translateY(5px);
+}
+
+.card-trip-img {
+  height: 400px;
   width: 100%;
   object-fit: cover;
 }
 
 .card-trip h2 {
+  color: #F17300;
   font-size: 16px;
   font-weight: bold;
   margin: 0;
@@ -20,6 +25,7 @@
 
 .card-trip p {
   font-size: 12px;
+  font-weight: 500;
   opacity: .7;
   margin: 0;
 }
@@ -42,12 +48,12 @@
 
 .heart-icon {
   position: absolute;
-  top: 4px;
-  right: 12px;
-  color: #DB5461;
+  top: 8px;
+  right: 16px;
+  color: #F17300;
   font-size: 24px;
 }
 
 .heart-icon:hover {
-  color: #B80C09;
+  color: #F17300;
 }

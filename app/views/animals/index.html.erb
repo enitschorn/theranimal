@@ -13,7 +13,7 @@
         </div>
         <% end %>
         <%= link_to animal_path(animal) do  %>
-          <%= cl_image_tag animal.photo, crop: :fill %>
+          <%= cl_image_tag animal.photo, class: "card-trip-img" %>
         <% end %>
         <div class="card-trip-infos">
           <div>

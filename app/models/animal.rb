@@ -6,7 +6,7 @@ class Animal < ApplicationRecord
 
   has_many :favorites
   has_many :therapies
-  has_many :reviews
+  has_many :reviews, dependent: :destroy
   belongs_to :user
 
   def average_rating

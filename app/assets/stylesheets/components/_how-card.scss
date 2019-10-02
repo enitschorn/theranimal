@@ -1,0 +1,39 @@
+.how-card {
+    min-height: 320px;
+    border-radius: 8px;
+    border: 1px solid #f17200;
+
+    .how-img {
+        width: 60px;
+    }
+    .how-title {
+        color: #F17300;
+        font-weight: 600;
+    }
+
+    .how-body {
+        margin-bottom: 32px;
+        font-weight: 500;
+    }
+
+    .how-btn {
+        background: #F17300;
+        padding: 13px 24px;
+        border-radius: 24px;
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .how-btn:hover {
+        background: white;
+        color: black;
+        border: 2px solid black;
+        font-weight: 600;
+    }
+}
+
+.how-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}

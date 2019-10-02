@@ -1,7 +1,7 @@
 .card-product {
   overflow: hidden;
-  height: 80px;
-  width: 300px;
+  height: 180px;
+  width: 340px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
@@ -11,16 +11,23 @@
 
 .card-product img {
   height: 100%;
-  width: 120px;
+  width: 200px;
   object-fit: cover;
 }
 
 .card-product h2 {
-  font-size: 16px;
+  font-size: 24px;
   font-weight: bold;
   margin: 0;
+  text-decoration: none;
+  color: #F17300;
 }
 
 .card-product .card-product-infos {
   padding: 16px;
+}
+
+.card-product:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }

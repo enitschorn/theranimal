@@ -5,7 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :therapies
-  has_many :animals
+  has_many :animals, dependent: :destroy
+  
 
   def owns?(animal)
     animal.user == self
