@@ -1,7 +1,7 @@
 <%= form_tag animals_path, method: :get do %>
   <%= text_field_tag :query,
     params[:query],
-    style: "font-size: 16px; width: 400px; padding: 8px; border-radius: 4px 4px; border: 1px solid #d1cfcf; box-shadow: 0 0 8px rgba(0,0,0,0.1)",
+    style: "font-size: 16px; width: 300px; padding: 8px; margin: 0 20px; border-radius: 4px 4px; border: 1px solid #d1cfcf; box-shadow: 0 0 8px rgba(0,0,0,0.1)",
     placeholder: "Find an animal"
   %>
 <% end %>

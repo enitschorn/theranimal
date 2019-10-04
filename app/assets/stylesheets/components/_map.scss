@@ -2,9 +2,8 @@
   display: flex;
 }
 
-
 #map {
-  width: 40vw;
+  width: 80vw;
   height: 100vh;
   position: sticky;
   top: 0;
@@ -20,5 +19,5 @@
 
 .mapboxgl-popup-content {
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }

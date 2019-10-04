@@ -2,15 +2,33 @@
   justify-content: space-between;
   // background: white;
   border-bottom: 2px solid rgba(230,230,230,0.5);
-  font-size: 14px;
-  color: black;
-  padding: 8px;
-}
+  background: #ffffff;
+  padding: 24px;
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
+  .brand-name {
+    font-family: 'Montserrat', 'sans-serif';
+    font-weight: 700;
+    font-size: 28px;
+    color: #F17300;
+    text-decoration: none;
+  }
 
-.navbar-lewagon .navbar-brand img {
-  width: 175px;
+  .nav-link {
+    font-family: 'Montserrat', 'sans-serif';
+    font-weight: 500;
+    font-size: 16px;
+    color: #000000;  
+  }
+
+  .nav-link:hover {
+    text-decoration: line-through;
+  }
+
+  .navbar-collapse {
+    flex-grow: 0;
+  }
+
+  .navbar-brand img {
+    width: 175px;
+  }
 }

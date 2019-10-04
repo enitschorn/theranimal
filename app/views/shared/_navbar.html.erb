@@ -1,15 +1,14 @@
 <div class="navbar navbar-expand-sm navbar-lewagon">
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <%= link_to root_path, class: "navbar-brand" do %>
-      <img src="https://res.cloudinary.com/du7l2fe4u/image/upload/v1569908452/paw-print-_qbsy1f.jpg" style="width: 30px; margin: 0 16px;" />
-    <% end %>
-    <div class="search-form">
-      <%= render :partial => "shared/search-form" %>
-    </div>
+    <%= link_to "Theranimal", root_path, class: "brand-name" %>
   </div>
-
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
+        <li>
+          <div class="search-form">
+          <%= render :partial => "shared/search-form" %>
+          </div>
+        </li>
       <li><%= link_to "Browse", animals_path, class: "nav-link" %></li>
       <% if current_user.present? %>
         <li><%= link_to "Add an animal", new_animal_path, class: "nav-link" %></li>
