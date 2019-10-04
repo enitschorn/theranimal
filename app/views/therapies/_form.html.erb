@@ -1,5 +1,11 @@
+
 <%= simple_form_for [@animal, @therapy] do |f| %>
-  <%= f.input :start_on, label: 'From' %>
-  <%= f.input :end_on, label: 'To' %>
+  <%= f.input :start_on, html5: true, as: :date, label: 'From' %>
+  <%= f.input :end_on, html5: true, as: :date, label: 'To' %>
+
+  <%= f.hidden_field :therapy_price, value: @animal.price %>
+
+  <h5><span class="therapy-total-price"></span></h5>
+
   <%= f.button :submit, 'Reserve', class: 'btn-flat', style: 'width: 100%; margin-top: 8px'%>
 <% end %>

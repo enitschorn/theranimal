@@ -2,9 +2,10 @@
   display: flex;
   align-items: left;
   position: relative;
+  background-attachment: fixed;
   background-size: cover;
-  height: 80vh;
   background-position: center;
+  height: 100vh;
   padding: 150px 0;
 
   h1 {
@@ -21,7 +22,7 @@
 
 .animal-container {
   display: flex;
-  width: 60vw;
+  width: 70vw;
   margin: 0 auto;
 }
 
