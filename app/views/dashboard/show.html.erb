@@ -14,18 +14,20 @@
           </div>
           <% end %>
           <div class="card-therapy-infos">
-            <h4><%= therapy.animal.name %></h4><br>
             <h6><%= therapy.start_on.strftime('%A, %b %d') %> - <%= therapy.end_on.strftime('%A, %b %d') %></h6>
-            <h5>$ <%= therapy.animal.price %></h5>
+            <h3><%= therapy.animal.name %></h3>
+            <h6><%= therapy.animal.description %></h6><br>
+            <% date = therapy.end_on.mjd - therapy.start_on.mjd + 1 %>
+            <h4>$ <%= therapy.animal.price*date %></h4>
           <div class=card-therapy-links>
             <%= link_to animal_therapy_path(therapy.animal, therapy), class: "therapy-delete-link", method: :delete, data: { confirm: 'Are you sure?' }  do %>
-            <i class="fas fa-trash" style="color: rgba(0,0,0,0.8)"; font-size: 16px></i>
+            <i class="fas fa-trash therapy-edit-icons"></i>
             <% end %>
             <%= link_to edit_animal_therapy_path(therapy.animal, therapy), class: "therapy-edit-link" do %>
-            <i class="fas fa-pen" style="color: rgba(0,0,0,0.8)"; font-size: 16px></i></i>
+            <i class="fas fa-pen therapy-edit-icons"></i></i>
             <% end %>
             <%= link_to new_animal_review_path(therapy.animal), class: "new-review-link" do %>
-            <i class="fas fa-star" style="color: rgba(0,0,0,0.8)"; font-size: 16px></i>
+            <i class="fas fa-star therapy-edit-icons"></i>
             <% end %>
           </div>
           </div>
@@ -46,13 +48,12 @@
       <% @animals.each do |animal| %>
         <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path animal.photo %>')">
           <%= animal.name %>
-
           <%= link_to animal_path(animal), class: "animal-show-link" do %><% end %>
           <%= link_to edit_animal_path(animal), class: "animal-edit-link" do %>
-          <i class="fas fa-pen" style="color: rgba(255,255,255,0.4); font-size: 16px"></i>
+          <i class="fas fa-pen animal-edit-icons"></i>
           <% end %>
           <%= link_to animal_path(animal), class: "animal-delete-link", method: :delete, data: { confirm: 'Are you sure?' } do %>
-            <i class="fas fa-trash" style="color: rgba(255,255,255,0.4); font-size: 16px"></i>
+            <i class="fas fa-trash animal-edit-icons"></i>
           <% end %>
         </div>
       <% end %>
