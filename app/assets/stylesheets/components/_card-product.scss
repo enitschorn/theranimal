@@ -1,7 +1,6 @@
 .card-product {
   overflow: hidden;
   height: 180px;
-  width: 340px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
@@ -11,7 +10,7 @@
 
 .card-product img {
   height: 100%;
-  width: 200px;
+  width: 50%;
   object-fit: cover;
 }
 
@@ -24,7 +23,8 @@
 }
 
 .card-product .card-product-infos {
-  padding: 16px;
+  width: 50%;
+  text-align: center;
 }
 
 .card-product:hover {
