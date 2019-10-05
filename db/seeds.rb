@@ -48,7 +48,7 @@ puts 'Creating animals...'
 @lion.save!
 
 @dog = Animal.new(
-  remote_photo_url: 'https://images.unsplash.com/photo-1513904178077-6c5730ddd446?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+  remote_photo_url: 'https://res.cloudinary.com/du7l2fe4u/image/upload/v1570238655/uw2qi4bvg1kxqobtf5qf_sndgtx.jpg',
   name: 'Charlie',
   species: 'dog',
   price: 100,

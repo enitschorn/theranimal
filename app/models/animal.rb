@@ -5,7 +5,7 @@ class Animal < ApplicationRecord
   after_validation :geocode, if: :will_save_change_to_address?
 
   has_many :favorites
-  has_many :therapies
+  has_many :therapies, dependent: :destroy
   has_many :reviews, dependent: :destroy
   belongs_to :user
 
