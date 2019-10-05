@@ -11,9 +11,9 @@
     <%= stylesheet_pack_tag 'application', media: 'all' %>
   </head>
   <body>
-    <%= render 'shared/flashes' %>
-    <%= render 'shared/navbar' %>
-    <div class="wrap">
+    <div class="main-content">
+      <%= render 'shared/flashes' %>
+      <%= render 'shared/navbar' %>
       <%= yield %>
     </div>
     <%= render 'shared/footer' %>

@@ -1,31 +1,36 @@
-.footer {
-  background: #F4F4F4;
+body {
   display: flex;
-  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+}
+
+.footer {
+  background: #fbfbfb;
+  display: flex;
+  align-items: right;
   justify-content: space-between;
-  height: 100px;
-  padding: 0px 50px;
   color: rgba(0,0,0,0.3);
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  margin-bottom: 0px;
+  margin-top: 24px;
+  height: 60px;
+  padding: 20px;
 }
 
 .footer-links {
   display: flex;
   align-items: center;
 }
+
 .footer-links a {
-  color: black;
-  opacity: 0.15;
+  color: #f17200;
+  opacity: 0.6;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 16px;
   padding: 0px 10px;
 }
 .footer-links a:hover {
   opacity: 1;
-}
-.footer .fa-heart {
-  color: #D23333;
 }

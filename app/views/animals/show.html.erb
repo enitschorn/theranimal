@@ -1,5 +1,5 @@
 <div class="show-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @animal.photo %>');">
-  <div class="container">
+  <div class="animal-container">
     <div class="show-name">
       <h1><%= @animal.name %></h1>
     </div>
@@ -46,7 +46,7 @@
 
 <div class="animal-container">
   <div class="review-info" style="margin-bottom: 24px;">
-    <div clas="reviews-heading" style="border-bottom: 2px solid rgba(230,230,230,0.5);">
+    <div class="reviews-heading" style="border-bottom: 2px solid rgba(230,230,230,0.5);">
       <h5><%= pluralize @animal.reviews.size, 'Review' %>  <%= rating_display(@animal) %></h5>
     </div>
     <% if @animal.reviews.present? %>

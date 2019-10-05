@@ -3,6 +3,7 @@
   align-items: left;
   position: relative;
   background-size: cover;
+  background-image: url(https://res.cloudinary.com/du7l2fe4u/image/upload/v1569983927/banner_1_kgdloe.jpg);
   height: 80vh;
   background-position: center;
   background-attachment: fixed;
@@ -13,7 +14,7 @@
     margin: 0;
     color: white;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-    font-size: 78px;
+    font-size: 40px;
     font-weight: 900;
     text-align: center;
   }
@@ -22,7 +23,7 @@
 .banner-text-box {
   position: relative;
   width: 100%;
-  margin-left: 0;
+  margin-right: 0;
   top: 40%;
   left: 40%;
   transform: translate(-50%, -50%);
