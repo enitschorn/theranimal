@@ -8,9 +8,7 @@
 
 .review-form_info {
   position: relative;
-  width: 40%;
   padding: 32px;
-  margin: 0 88px 0 88px;
 }
 
 .review-form-heading h3 {
@@ -22,4 +20,16 @@
 .review-form-image {
   opacity: 0.8;
   margin-top: 40px;
+}
+
+@media(max-width: 992px) {
+  .review-form-image {
+    display: none;
+  }
+}
+
+@media(max-width: 768px) {
+  .review-form-image {
+    display: none;
+  }
 }

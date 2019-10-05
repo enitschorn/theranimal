@@ -1,7 +1,10 @@
 <div class="navbar navbar-expand-sm navbar-lewagon">
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <%= link_to "Theranimal", root_path, class: "brand-name" %>
-  </div>
+  <%= link_to "Theranimal", root_path, class: "brand-name" %>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
         <li>
@@ -9,21 +12,14 @@
           <%= render :partial => "shared/search-form" %>
           </div>
         </li>
-      <li><%= link_to "Browse", animals_path, class: "nav-link" %></li>
+        <li><%= link_to "Browse", animals_path, class: "nav-link" %></li>
       <% if current_user.present? %>
         <li><%= link_to "Add an animal", new_animal_path, class: "nav-link" %></li>
         <li><%= link_to "Dashboard", dashboard_path(current_user.id), class: "nav-link" %></li>
-        <li class="nav-item dropdown">
-          <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://res.cloudinary.com/du7l2fe4u/image/upload/v1570173828/photo-1477936432016-8172ed08637e_fgxucs.jpg" />
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Add an animal", new_animal_path, class: "dropdown-item" %>
-            <%= link_to "Dashboard", dashboard_path(current_user.id), class: "dropdown-item" %>
-            <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-          </div>
-        </li>
-        <% else %>
-          <li><%= link_to "Sign In", new_user_session_path, class: "nav-link" %></li>
-          <li><%= link_to "Register", new_user_session_path, class: "nav-link" %></li>
+        <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "nav-link" %></li>
+      <% else %>
+        <li><%= link_to "Sign In", new_user_session_path, class: "nav-link" %></li>
+        <li><%= link_to "Register", new_user_session_path, class: "nav-link" %></li>
       <% end %>
     </ul>
   </div>

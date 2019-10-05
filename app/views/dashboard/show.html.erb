@@ -4,8 +4,7 @@
       <h3>Recently booked therapies</h3>
       <p>These are all the therapies you have booked.</p>
     </div>
-    <div class="cards">
-      <div class="card-therapy-container">
+    <div class="therapy-cards">
       <% @therapies.each do |therapy| %>
         <div class="card-therapy">
           <%= link_to edit_animal_therapy_path(@current_user.id) do  %>
@@ -32,8 +31,7 @@
           </div>
           </div>
         </div>
-    <% end %>
-    </div>
+      <% end %>
     </div>
   </div>
 </div>

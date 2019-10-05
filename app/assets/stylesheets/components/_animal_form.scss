@@ -8,9 +8,7 @@
 
 .form_info {
   position: relative;
-  width: 70%;
   padding: 32px;
-  margin: 0 200px 0 88px;
 }
 
 .form-heading h3 {
@@ -21,5 +19,17 @@
 
 .form-image {
   opacity: 0.8;
+}
+
+@media(max-width: 992px) {
+  .form-image {
+    display: none;
+  }
+}
+
+@media(max-width: 768px) {
+  .form-image {
+    display: none;
+  }
 }
 

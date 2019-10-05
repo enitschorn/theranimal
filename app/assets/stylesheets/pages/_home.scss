@@ -1,26 +1,12 @@
-.how-box {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-
-#how {
-  h2 {
-    color: #F17300;
-    font-weight: 700;
-    text-align: center;
-    }
-}
-
 .testimonials {
   background: #F17300;
-  height: 300px;
   padding: 1px;
+  height: 200px;
 
   .testimonial-quotes {
     color: white;
     text-align: center;
-    font-weight: 600;
+    font-weight: 500;
   }
 }
 

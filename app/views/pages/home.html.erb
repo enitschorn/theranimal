@@ -1,61 +1,52 @@
 
 <%= render :partial => "shared/banner" %>
 
-<div class="container how-box">
-  <div class="row mt-5 mb-5 text-center">
-    <div id="how" class="col-12 mt-4 mb-4">
-      <h2>How does it work?</h2>
-    </div>
-
-    <div class="col-4">
-      <div class="card how-card">
-        <div class="card-body">
-          <img alt="Search for animals" class="mb-3 how-img" src="https://res.cloudinary.com/du7l2fe4u/image/upload/v1569984952/loupe_qhrkr0.png">
-          <h5 class="card-title how-title">Search for animals</h5>
-          <p class="card-text how-body"> Search our collection of diverse and fun animals. Feel like you need some help getting back on track? Let's get started.</p>
-          <%= link_to 'Browse animals', animals_path, class: "how-btn" %>
-        </div>
+<div class="container my-5">
+  <div id="how" class="col-12 mt-4 mb-4">
+    <h2>How does it work?</h2>
+  </div>
+  <div class="how-cards">
+    <div class="card how-card">
+      <div class="card-body">
+        <img alt="Search for animals" class="mb-3 how-img" src="https://res.cloudinary.com/du7l2fe4u/image/upload/v1569984952/loupe_qhrkr0.png">
+        <h5 class="card-title how-title">Search for animals</h5>
+        <p class="card-text how-body"> Search our collection of diverse and fun animals. Feel like you need some help getting back on track? Let's get started.</p>
+        <%= link_to 'Browse animals', animals_path, class: "how-btn" %>
       </div>
     </div>
-
-    <div class="col-4">
-      <div class="card how-card">
-        <div class="card-body">
-          <img alt="Hire an animal" class="mb-3 how-img" src="https://res.cloudinary.com/du7l2fe4u/image/upload/v1569984952/dog_qbxhjv.png">
-          <h5 class="card-title how-title">Hire an animal</h5>
-          <p class="card-text how-body">Choose how long you want to have your new furry companion with you -- you can also come back any time and hire them again.</p>
-          <%= link_to 'Hire an animal', animals_path, class: "how-btn" %>
-        </div>
+    <div class="card how-card">
+      <div class="card-body">
+        <img alt="Hire an animal" class="mb-3 how-img" src="https://res.cloudinary.com/du7l2fe4u/image/upload/v1569984952/dog_qbxhjv.png">
+        <h5 class="card-title how-title">Hire an animal</h5>
+        <p class="card-text how-body">Choose how long you want to have your new furry companion with you -- you can also come back any time and hire them again.</p>
+        <%= link_to 'Hire an animal', animals_path, class: "how-btn" %>
       </div>
     </div>
-
-    <div class="col-4">
-      <div class="card how-card">
-        <div class="card-body">
-          <img alt="Share the experience" class="mb-3 how-img" src="https://res.cloudinary.com/du7l2fe4u/image/upload/v1569984952/charity_lzdtra.png">
-          <h5 class="card-title how-title">Start now</h5>
-          <p class="card-text how-body">We promise you'll feel so much better after having spent time with one of our fluffy therapists.</p>
-          <%= link_to 'Sign up today', animals_path, class: "how-btn" %>
-        </div>
+    <div class="card how-card">
+      <div class="card-body">
+        <img alt="Share the experience" class="mb-3 how-img" src="https://res.cloudinary.com/du7l2fe4u/image/upload/v1569984952/charity_lzdtra.png">
+        <h5 class="card-title how-title">Start now</h5>
+        <p class="card-text how-body">We promise you'll feel so much better after having spent time with one of our fluffy therapists.</p>
+        <%= link_to 'Sign up today', animals_path, class: "how-btn" %>
       </div>
     </div>
   </div>
 </div>
 
-<div class="testimonials" style="margin-top: 40px">
-  <div class="container" style="margin-top: 100px;">
-    <div id="carouselExampleSlidesOnly" class="carousel slide testimonial-quotes" data-ride="carousel" style="width: 50vw; margin: 0 auto">
+<div class="testimonials">
+  <div class="container" style="padding: 40px">
+    <div id="carouselExampleSlidesOnly" class="carousel slide testimonial-quotes" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <h4>Really great experience with Theranimal.<br>Haven't been depressed for hours now. Great feeling!</h4>
+          <h5>Really great experience with Theranimal.<br>Haven't been depressed for hours now. Great feeling!</h5>
           <p>Maya H.</p>
         </div>
         <div class="carousel-item">
-          <h4>Loved Charlie so much!<br>Wish I could've kept him forever with me!<br>He really helped me back on track.</h4>
+          <h5>Loved Charlie so much!<br>Wish I could've kept him forever with me!<br>He really helped me back on track.</h5>
           <p>Lucas T.</p>
         </div>
         <div class="carousel-item">
-          <h4>Had the most magical weekend with Frah!<br>Still seeing stars and sparkles!</h4>
+          <h5>Had the most magical weekend with Frah!<br>Still seeing stars and sparkles!</h5>
           <p>Farida A.</p>
         </div>
       </div>
@@ -64,42 +55,35 @@
 </div>
 
 
-<div class="container" style="margin-top: 80px";>
-  <div class="row mt-5 mb-5 text-center">
-    <div id="how" class="col-12 mt-4 mb-4">
-      <h2>Discover our animals</h2>
-    </div>
-
-    <div class="col-4">
-      <% Animal.where(species: 'dog') %>
-      <%= link_to animals_path(query: 'dog'), class: "card-link" do %>
-        <div class="card-product">
-          <img src="https://images.unsplash.com/photo-1530126483408-aa533e55bdb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2002&q=80" />
-          <div class="card-product-infos">
-            <h2>Dogs</h2>
-          </div>
+<div class="container my-5";>
+  <div id="how" class="col-12 mt-4 mb-4">
+    <h2>Discover our animals</h2>
+  </div>
+  <div class="how-cards">
+    <% Animal.where(species: 'dog') %>
+    <%= link_to animals_path(query: 'dog'), class: "card-link" do %>
+      <div class="card-product">
+        <img src="https://images.unsplash.com/photo-1530126483408-aa533e55bdb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2002&q=80" />
+        <div class="card-product-infos">
+          <h2>Dogs</h2>
         </div>
-      <% end %>
-    </div>
-    <div class="col-4">
-      <%= link_to animals_path(query: 'lion'), class: "card-link" do %>
-        <div class="card-product">
-          <img src="https://images.unsplash.com/photo-1516642499105-492ff3ac521b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" />
-          <div class="card-product-infos">
-            <h2>Lions</h2>
-          </div>
+      </div>
+    <% end %>
+    <%= link_to animals_path(query: 'lion'), class: "card-link" do %>
+      <div class="card-product">
+        <img src="https://images.unsplash.com/photo-1516642499105-492ff3ac521b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" />
+        <div class="card-product-infos">
+          <h2>Lions</h2>
         </div>
-      <% end %>
-    </div>
-    <div class="col-4">
-      <%= link_to animals_path(query: 'koala'), class: "card-link" do %>
-        <div class="card-product">
-          <img src="https://images.unsplash.com/photo-1544779493-aa344a6ddaac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" />
-          <div class="card-product-infos">
-            <h2>Koalas</h2>
-          </div>
+      </div>
+    <% end %>
+    <%= link_to animals_path(query: 'koala'), class: "card-link" do %>
+      <div class="card-product">
+        <img src="https://images.unsplash.com/photo-1544779493-aa344a6ddaac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" />
+        <div class="card-product-infos">
+          <h2>Koalas</h2>
         </div>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
   </div>
 </div>

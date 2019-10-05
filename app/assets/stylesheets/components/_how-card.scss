@@ -1,7 +1,35 @@
+.how-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    flex-grow: 1;
+    grid-gap: 24px;
+}
+  
+@media(max-width: 992px) {
+    .how-cards {
+      grid-template-columns: 1fr 1fr;
+    }
+}
+  
+@media(max-width: 768px) {
+    .how-cards {
+      grid-template-columns: 1fr;
+    }
+}
+
+#how {
+    h2 {
+        color: #F17300;
+        font-weight: 700;
+        text-align: center;
+        }
+}
+
 .how-card {
-    min-height: 320px;
     border-radius: 8px;
     border: 1px solid #f17200;
+    text-align: center;
+    padding: 16px;
 
     .how-img {
         width: 60px;
