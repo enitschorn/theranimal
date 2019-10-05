@@ -27,7 +27,6 @@
           <%= link_to 'Hire an animal', animals_path, class: "how-btn" %>
         </div>
       </div>
-
     </div>
 
     <div class="col-4">
@@ -64,35 +63,43 @@
   </div>
 </div>
 
+
 <div class="container" style="margin-top: 80px";>
-  <div id="how" class="col-12 mt-4 mb-4">
+  <div class="row mt-5 mb-5 text-center">
+    <div id="how" class="col-12 mt-4 mb-4">
       <h2>Discover our animals</h2>
     </div>
-  <div class="cards">
-    <% Animal.where(species: 'dog') %>
-    <%= link_to animals_path(query: 'dog'), class: "card-link" do %>
-      <div class="card-product" >
-        <img src="https://images.unsplash.com/photo-1530126483408-aa533e55bdb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2002&q=80" />
-        <div class="card-product-infos">
-          <h2>Dogs</h2>
+
+    <div class="col-4">
+      <% Animal.where(species: 'dog') %>
+      <%= link_to animals_path(query: 'dog'), class: "card-link" do %>
+        <div class="card-product">
+          <img src="https://images.unsplash.com/photo-1530126483408-aa533e55bdb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2002&q=80" />
+          <div class="card-product-infos">
+            <h2>Dogs</h2>
+          </div>
         </div>
-      </div>
-    <% end %>
-    <%= link_to animals_path(query: 'lion'), class: "card-link" do %>
-      <div class="card-product">
-        <img src="https://images.unsplash.com/photo-1516642499105-492ff3ac521b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" />
-        <div class="card-product-infos">
-          <h2>Lions</h2>
+      <% end %>
+    </div>
+    <div class="col-4">
+      <%= link_to animals_path(query: 'lion'), class: "card-link" do %>
+        <div class="card-product">
+          <img src="https://images.unsplash.com/photo-1516642499105-492ff3ac521b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" />
+          <div class="card-product-infos">
+            <h2>Lions</h2>
+          </div>
         </div>
-      </div>
-    <% end %>
-    <%= link_to animals_path(query: 'koala'), class: "card-link" do %>
-      <div class="card-product">
-        <img src="https://images.unsplash.com/photo-1544779493-aa344a6ddaac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" />
-        <div class="card-product-infos">
-          <h2>Koalas</h2>
+      <% end %>
+    </div>
+    <div class="col-4">
+      <%= link_to animals_path(query: 'koala'), class: "card-link" do %>
+        <div class="card-product">
+          <img src="https://images.unsplash.com/photo-1544779493-aa344a6ddaac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" />
+          <div class="card-product-infos">
+            <h2>Koalas</h2>
+          </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
