@@ -1,4 +1,4 @@
-<div class="show-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @animal.photo %>');">
+<div class="show-banner" style="background-image: url('<%= cl_image_path @animal.photo %>');">
   <div class="animal-container">
     <h1><%= @animal.name %></h1>
   </div>
@@ -32,7 +32,7 @@
     </div>
   </div>
   <% unless current_user.owns?(@animal) %>
-    <div class="therapies" style="margin-left: 16px">
+    <div class="therapies">
       <div class="therapy-price"><h5><strong>$<%= @animal.price %></strong><small> per day</small></h5></div>
       <div class="therapy-dates">
         <%= render 'therapies/form', animal: @animal, therapy: @therapy %>
@@ -43,13 +43,13 @@
 </div>
 
 <div class="animal-container">
-  <div class="review-info" style="margin-bottom: 24px;">
-    <div class="reviews-heading" style="border-bottom: 2px solid rgba(230,230,230,0.5);">
+  <div class="review-info">
+    <div class="reviews-heading">
       <h5><%= pluralize @animal.reviews.size, 'Review' %>  <%= rating_display(@animal) %></h5>
     </div>
     <% if @animal.reviews.present? %>
       <% @animal.reviews.each do |review| %>
-        <div class="rating" style="border-bottom: 2px solid rgba(230,230,230,0.5); padding: 16px;">
+        <div class="rating">
           <%= review.description %>
         </div>
         <% end %>

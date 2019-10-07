@@ -23,6 +23,7 @@
   display: flex;
   width: 70vw;
   margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 .animal-heading h2 {
@@ -35,10 +36,10 @@
 .animal-info {
   display: flex;
   justify-content: space-around;
-  margin: 0 auto;
   background: #F4F4F4;
   padding: 32px;
-  width: 100%;
+  max-width: 600px;
+  margin: 16px;
 }
 
 .animal-details {
@@ -48,8 +49,9 @@
 
 .therapies {
   border: 1px solid rgba(190,190,190,0.5);
-  padding: 24px;
-  width: 40%;
+  padding: 32px;
+  max-width: 400px;
+  margin: 16px;
 }
 
 .therapy-price {
@@ -64,4 +66,17 @@
 .therapy-charging-info {
   padding-top: 8px;
   text-align: center;
+}
+
+.review-info {
+  margin: 16px 24px;
+}
+
+.reviews-heading {
+  border-bottom: 2px solid rgba(230,230,230,0.5);
+}
+
+.rating {
+  border-bottom: 2px solid rgba(230,230,230,0.5); 
+  padding: 16px;
 }
