@@ -63,14 +63,14 @@
   text-decoration: none;
 }
 
-@media only screen and (max-width: 992px) {
+@media(max-width: 768px) {
   .banner {
-    background-image: url(https://res.cloudinary.com/du7l2fe4u/image/upload/v1569983927/banner_1_kgdloe.jpg);
+    background-image: url(https://res.cloudinary.com/du7l2fe4u/image/upload/v1570409401/banner_ipad_xbe6tw.jpg);
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media(max-width: 375px) {
   .banner {
-    background-image: url(https://res.cloudinary.com/du7l2fe4u/image/upload/v1569983927/banner_1_kgdloe.jpg);
+    background-image: url(https://res.cloudinary.com/du7l2fe4u/image/upload/v1570409613/banner_phone_pe7zdw.jpg);
   }
 }
