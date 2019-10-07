@@ -2,24 +2,24 @@
   <%= link_to "Theranimal", root_path, class: "brand-name" %>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+    <span class="navbar-toggler-icon"><i class="fas fa-bars" style="color: #000000; font-size: 28px;"></i></span>
   </button>
   
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
         <li>
-          <div class="search-form">
+          <div class="dropdown-item search-form">
           <%= render :partial => "shared/search-form" %>
           </div>
         </li>
-        <li><%= link_to "Browse", animals_path, class: "nav-link" %></li>
+        <li><%= link_to "Browse", animals_path, class: "dropdown-item nav-link" %></li>
       <% if current_user.present? %>
-        <li><%= link_to "Add an animal", new_animal_path, class: "nav-link" %></li>
-        <li><%= link_to "Dashboard", dashboard_path(current_user.id), class: "nav-link" %></li>
-        <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "nav-link" %></li>
+        <li><%= link_to "Add an animal", new_animal_path, class: "dropdown-item nav-link" %></li>
+        <li><%= link_to "Dashboard", dashboard_path(current_user.id), class: "dropdown-item nav-link" %></li>
+        <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "dropdown-item nav-link" %></li>
       <% else %>
-        <li><%= link_to "Sign In", new_user_session_path, class: "nav-link" %></li>
-        <li><%= link_to "Register", new_user_session_path, class: "nav-link" %></li>
+        <li><%= link_to "Sign In", new_user_session_path, class: "dropdown-item nav-link" %></li>
+        <li><%= link_to "Register", new_user_session_path, class: "dropdown-item nav-link" %></li>
       <% end %>
     </ul>
   </div>
